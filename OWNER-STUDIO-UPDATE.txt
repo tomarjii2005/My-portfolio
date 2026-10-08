@@ -1,0 +1,11 @@
+PRIVATE OWNER STUDIO + RESUME UPLOAD
+
+Public visitors can view certificates and download the published resume. The portfolio no longer links to Owner Studio. The /admin, /admin/ and /admin.html routes show only sign-in until the owner has authenticated; the server then supplies the upload interface. Both certificate and resume writes require the same existing owner password/session and a same-origin request.
+
+The existing CERTIFICATE_ADMIN_PASSWORD stays in Netlify. No new password or account is needed. Keep /admin bookmarked. Anyone who knows the password can sign in; sharing this URL alone does not give upload access.
+
+Resume: sign in, drop a PDF up to 4 MB into Your resume, and select Publish resume. The new PDF atomically replaces the current downloadable resume. Certificates already stored on this Netlify site stay available.
+
+Build: npm run build now runs scripts/build.mjs. It publishes dist, strips the public Owner Studio link, adds the resume download integration, and generates the protected HTML module used by the owner-studio function. public/admin.html is a source template; it is excluded from static publishing. All source folders in this archive must retain their structure.
+
+Verification: local tests passed for unauthenticated and forged-session rejection, server-side owner HTML gating, invalid PDF rejection, resume replacement/download, failed replacement preserving the previous resume, existing certificate actions, and the public resume button. Live deployment verification is pending GitHub write access.
