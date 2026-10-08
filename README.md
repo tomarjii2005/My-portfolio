@@ -18,7 +18,7 @@ HTML, CSS, and vanilla JavaScript.
 - Farmers AI Support
 
 ## Live Portfolio
-https://amazing-paletas-8dbf9e.netlify.app/
+https://tomarportfolio.netlify.app/
 
 ## Run Locally
 Download the repository and open index.html in a browser.
