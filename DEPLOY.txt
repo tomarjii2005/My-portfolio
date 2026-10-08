@@ -1,0 +1,10 @@
+KAVYA TOMAR PORTFOLIO — NETLIFY READY
+
+1. Upload this folder to your existing Netlify site (or drag the folder into Netlify Drop).
+2. After deploy, submit the contact form once. Netlify will detect the form named: portfolio-contact.
+3. Messages will appear in Netlify Dashboard > Forms > portfolio-contact.
+4. To also receive each message at tomarkavya74@gmail.com, open Netlify Dashboard > Project configuration > Forms > Form notifications and add an Email notification for portfolio-contact.
+
+No API key is required. The form uses Netlify Forms + honeypot spam protection.
+Resume is intentionally unchanged.
+Internship certificate button is a clean placeholder until the certificate file is added.
