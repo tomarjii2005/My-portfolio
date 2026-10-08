@@ -1,0 +1,9 @@
+{
+  "name": "kavya-portfolio-certificates",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": { "build": "node -e \"console.log('Portfolio ready')\"" },
+  "dependencies": { "@netlify/blobs": "10.7.13" }
+}

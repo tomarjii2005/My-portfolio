@@ -1,0 +1,42 @@
+KAVYA PORTFOLIO — CERTIFICATES & ACHIEVEMENTS
+
+WHAT CHANGED
+The internship certificate placeholder is removed. A separate animated Certificates & Achievements section now supports image/PDF previews, filters and downloads. Owner studio provides private sign-in, drag-and-drop uploads and removal. Published uploads are stored in Netlify Blobs and remain through future deployments of this same Netlify site.
+
+UPLOAD TO GITHUB
+1. Extract this ZIP.
+2. Open your My-portfolio repository > Add file > Upload files.
+3. Drag in BOTH folders (public and netlify), plus package.json, netlify.toml and this SETUP.txt file. Keep folder names and the files inside them intact.
+   Repository root must contain:
+     public/index.html
+     public/admin.html
+     public/admin.js
+     public/certificates.css
+     public/certificates.js
+     netlify/functions/certificate-auth.mjs
+     netlify/functions/certificates.mjs
+     netlify/lib/security.mjs
+     package.json
+     netlify.toml
+4. Commit changes. Replace the old netlify.toml with this one. It publishes the public folder. Your older root index.html and portfolio.html may remain; the site will use public/index.html.
+
+ONE-TIME PRIVATE PASSWORD SETUP
+In Netlify, open your existing site > Project configuration > Environment variables.
+Add CERTIFICATE_ADMIN_PASSWORD. Choose your own unique private password, at least 20 characters and at most 256 characters. If scopes are offered, include Functions; use the Production deploy context. Never put the password in GitHub, HTML or this text file, or send it in chat.
+Then trigger a new production deploy. A password change requires redeployment and invalidates previous sessions.
+Netlify installs the storage dependency during the build; deploy through the connected GitHub repo. Dragging only the public folder into Netlify Drop will not install the backend.
+
+UPLOAD CERTIFICATES
+Open https://tomarportfolio.netlify.app/admin.html (or your site's current domain).
+Sign in with your password. Drop ONE PDF/JPG/PNG/WebP file (up to 4 MB), set title, issuer, type and optional date, then choose Publish to portfolio. The item is public immediately after successful upload; visitors may need to refresh an already open page. Session lasts one hour.
+Use Remove to delete an item. Keep your own original files: deletion has no restore button. Uploads and function requests use your Netlify plan's storage/usage allocation.
+Admin uploads use Netlify storage, not GitHub, so future deployments preserve your collection on this same site. A different Netlify site has separate storage.
+
+FINAL LIVE CHECK
+1. Latest production deploy is Published.
+2. Main website shows Certificates & Achievements; internship has no Coming soon box.
+3. Sign in at /admin.html and publish a real certificate.
+4. Open the main website in a private browser window. Confirm the item, preview and download work without login. Confirm uploads/removal require owner sign-in.
+5. Test the existing contact form separately and confirm the message in Netlify Forms > portfolio-contact. Enable Forms detection and email notifications if needed.
+
+Local JavaScript syntax and security/storage-flow checks passed using an in-memory storage adapter. Dependency installation could not be completed in this environment, so Netlify's dependency install/function bundle, live password setup, actual storage and browser/PDF rendering still need the checks above. The storage dependency is pinned to a published Netlify package version.
