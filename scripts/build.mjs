@@ -5,7 +5,7 @@ const root = resolve(import.meta.dirname, '..');
 const out = resolve(root, 'dist');
 await mkdir(out, { recursive: true });
 // Only the portfolio's public assets are published. Admin HTML is served after authentication.
-for (const name of ['certificates.css', 'certificates.js', 'admin.js', 'owner-login.js', 'resume.js']) {
+for (const name of ['certificates.css', 'certificates.js', 'admin.js', 'owner-login.js', 'resume.js', 'welcome-transparent.webm', 'welcome-transparent-poster.webp', 'earth-texture.jpg']) {
   await copyFile(resolve(root, 'public', name), resolve(out, name));
 }
 for (const name of await readdir(out)) {
